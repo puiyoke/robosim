@@ -29,7 +29,7 @@ $(document).ready(function() {
         } else if (X >= 120 && X<=300 && Y>= 410 && Y<=540){
             $('#image').animate({left:'150px'});
         }
-        $('#coord').text('X: ' + X + ', Y: ' + Y + 'top' + crateTop + 'left' + crateLeft);
+        $('#coord').text('X: ' + X + ', Y: ' + Y);
     });
     $('#west').click(function() {
         var offset = $(this).offset();
