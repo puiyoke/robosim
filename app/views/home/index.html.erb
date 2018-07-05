@@ -1,6 +1,15 @@
 <style>
- #img {
+ #image {
     position: relative;
+    cursor:move;
+  }
+  #img {
+    position:absolute
+  }
+  #container {
+    width: 700px;
+    height: 500px;
+    border: 5px solid green;
   }
 </style>
 <button id='north' onclick='north()'>North</button>
@@ -8,4 +17,10 @@
 <button id='east' onclick='east()'>East</button>
 <button id='south' onclick='south()'>South</button><br>
 
-<img id="img" src="/assets/android.png">
+<div id="container"'>
+    <div id="image">
+        <img id="img" src="/assets/android.png">
+    </div>
+</div>
+Robot Location:<div id="coord"></div>
+

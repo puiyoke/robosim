@@ -17,14 +17,53 @@
 //= require_tree .
 
 function east() {
-    $('#img').animate({left:'+=50px'});
+    $('#image').animate({left:'+=50px'});
 }
 function west() {
-    $('#img').animate({left:'-=50px'});
+    $('#image').animate({left:'-=50px'});
 }
 function south() {
-    $('#img').animate({top:'+=50px'});
+    $('#image').animate({top:'+=50px'});
 }
 function north() {
-    $('#img').animate({top:'-=50px'});
+    $('#image').animate({top:'-=50px'});
 }
+
+
+$(document).ready(function() {
+    $('#east').click(function() {
+        var offset = $(this).offset();
+        var X = $("#image").offset().top;;
+        var Y = $("#image").offset().left;
+        $('#coord').text('X: ' + X + ', Y: ' + Y);
+    });
+    $('#west').click(function() {
+        var offset = $(this).offset();
+        var X = $("#image").offset().top;;
+        var Y = $("#image").offset().left;
+        $('#coord').text('X: ' + X + ', Y: ' + Y);
+    });
+    $('#south').click(function() {
+        var offset = $(this).offset();
+        var X = $("#image").offset().top;;
+        var Y = $("#image").offset().left;
+        $('#coord').text('X: ' + X + ', Y: ' + Y);
+    });
+    $('#north').click(function() {
+        var offset = $(this).offset();
+        var X = $("#image").offset().top;;
+        var Y = $("#image").offset().left;
+        $('#coord').text('X: ' + X + ', Y: ' + Y);
+    });
+
+    $( function() {
+        $( "#image" ).draggable();
+        $('#container').on("mouseup", function(e) {
+            var offset = $(this).offset();
+            var X = (e.pageX - offset.left);
+            var Y = (e.pageY - offset.top);
+            $('#coord').text('X: ' + X + ', Y: ' + Y);
+        });
+      } );
+
+});

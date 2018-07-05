@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tag %>
 </head>
@@ -19,7 +20,8 @@
     <% end %>
   </div>
 
-  
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <%= yield %>
 </body>
 </html>
