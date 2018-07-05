@@ -8,19 +8,30 @@
   }
   #container {
     width: 700px;
-    height: 500px;
+    height: 450px;
     border: 5px solid green;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: 30px 0 0 250px;
+  }
+  #button{
+      display: flex;
   }
 </style>
-<button id='north' onclick='north()'>North</button>
-<button id='west' onclick='west()'>West</button>
-<button id='east' onclick='east()'>East</button>
-<button id='south' onclick='south()'>South</button><br>
 
 <div id="container"'>
     <div id="image">
         <img id="img" src="/assets/android.png">
     </div>
 </div>
-Robot Location:<div id="coord"></div>
 
+<div id="button">
+<div style="text-align:center">
+    <button id='north'>North</button><br><br>
+    <button id='west'>West</button>
+    <button id='east'>East</button><br><br>
+    <button id='south'>South</button><br><br>
+</div>
+Robot Location:<div id="coord"></div>
+</div>
